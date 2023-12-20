@@ -19,6 +19,7 @@ public class Lab02_03 {
 			else
 				System.out.println(bill[i] + change + "개");
 		}
+		scan.close();
 		
 	}
 
