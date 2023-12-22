@@ -4,6 +4,7 @@ public class Lab02_08 {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
+		
 		System.out.print("x1, y1 입력 >> ");
 		int x1 = scan.nextInt(), y1 = scan.nextInt();
 		System.out.print("x2, y2 입력 >> ");

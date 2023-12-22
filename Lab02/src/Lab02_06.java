@@ -17,6 +17,7 @@ public class Lab02_06 {
 			System.out.println("박수짝짝");
 		else
 			System.out.println("박수 없음");
+		
 		scan.close();
 	}
 

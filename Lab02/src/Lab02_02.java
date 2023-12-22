@@ -4,6 +4,7 @@ public class Lab02_02 {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
+		
 		System.out.print("두 자리 수 정수 입력 (10~99) >> ");
 		int dec = scan.nextInt();
 		

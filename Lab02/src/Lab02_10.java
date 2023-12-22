@@ -10,7 +10,7 @@ public class Lab02_10 {
 		System.out.print("원의 중심 x2, y2, 반지름 radius 2 >> ");
 		int x2 = scan.nextInt(), y2 = scan.nextInt(), r2 = scan.nextInt();
 		
-		if (Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2)) < (r1 + r2))
+		if ( Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2)) < (r1 + r2) )
 			System.out.println("두 원은 서로 겹친다.");
 		else
 			System.out.println("두 원은 서로 겹치지 않는다.");
