@@ -26,6 +26,7 @@ public class Lab03_03 {
 			}
 			System.out.println();
 		}
+		scan.close();
 	}
 
 }
