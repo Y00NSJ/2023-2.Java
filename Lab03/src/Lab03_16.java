@@ -14,30 +14,31 @@ public class Lab03_16 {
 			if (userInput.equals("그만"))
 				break;
 			
+			System.out.print("사용자 = " + userInput + ", 컴퓨터 = " + comOutput);
 			switch (userInput) {
 				case "가위":
 					if (comOutput.equals("바위"))
-						System.out.println("사용자 = " + userInput + ", 컴퓨터 = " + comOutput + ", 컴퓨터가 이겼습니다. \n");
+						System.out.println(", 컴퓨터가 이겼습니다. \n");
 					else if (comOutput.equals("가위"))
-						System.out.println("사용자 = " + userInput + ", 컴퓨터 = " + comOutput + ", 비겼습니다. \n");
+						System.out.println(", 비겼습니다. \n");
 					else if (comOutput.equals("보"))
-						System.out.println("사용자 = " + userInput + ", 컴퓨터 = " + comOutput + ", 사용자가 이겼습니다. \n");
+						System.out.println(", 사용자가 이겼습니다. \n");
 					break;
 				case "바위":
 					if (comOutput.equals("바위"))
-						System.out.println("사용자 = " + userInput + ", 컴퓨터 = " + comOutput + ", 비겼습니다. \n");
+						System.out.println(", 비겼습니다. \n");
 					else if (comOutput.equals("가위"))
-						System.out.println("사용자 = " + userInput + ", 컴퓨터 = " + comOutput + ", 사용자가 이겼습니다. \n");
+						System.out.println(", 사용자가 이겼습니다. \n");
 					else if (comOutput.equals("보"))
-						System.out.println("사용자 = " + userInput + ", 컴퓨터 = " + comOutput + ", 컴퓨터가 이겼습니다. \n");
+						System.out.println(", 컴퓨터가 이겼습니다. \n");
 					break;
 				case "보":
 					if (comOutput.equals("바위"))
-						System.out.println("사용자 = " + userInput + ", 컴퓨터 = " + comOutput + ", 비겼습니다. \n");
+						System.out.println(", 비겼습니다. \n");
 					else if (comOutput.equals("가위"))
-						System.out.println("사용자 = " + userInput + ", 컴퓨터 = " + comOutput + ", 컴퓨터가 이겼습니다. \n");
+						System.out.println(", 컴퓨터가 이겼습니다. \n");
 					else if (comOutput.equals("보"))
-						System.out.println("사용자 = " + userInput + ", 컴퓨터 = " + comOutput + ", 사용자가 이겼습니다. \n");
+						System.out.println(", 사용자가 이겼습니다. \n");
 					break;
 				default:
 					System.out.println("가위, 바위, 보 중 하나를 입력해주세요. \n");
