@@ -10,7 +10,7 @@ public class Lab03_05 {
 		
 		System.out.print("양의 정수 10개를 입력하시오 >> ");
 		
-		for (int i = 0; i < 10; i++) {
+		for (int i : intArray) {
 			intArray[i] = scan.nextInt();
 			if (intArray[i] % 3 == 0) {
 				multipleArray[j] = intArray[i];
