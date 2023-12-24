@@ -11,9 +11,6 @@ public class Lab03_16 {
 			String userInput = scan.next();
 			String comOutput = rsp[(int)(Math.random()*4)];
 			
-			if (userInput.equals("그만"))
-				break;
-			
 			System.out.print("사용자 = " + userInput + ", 컴퓨터 = " + comOutput);
 			switch (userInput) {
 				case "가위":
@@ -44,7 +41,9 @@ public class Lab03_16 {
 					System.out.println("가위, 바위, 보 중 하나를 입력해주세요. \n");
 				
 			}
-			
+			if (userInput.equals("그만"))
+				scan.close();
+				break;
 		}
 	}
 
