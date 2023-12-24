@@ -11,7 +11,7 @@ public class Lab03_07 {
 			sum += randomIntArray[i];
 			System.out.print(randomIntArray[i] + " ");
 		}
-		System.out.print("\n평균은 " + (sum / randomIntArray.length));
+		System.out.print("\n평균은 " + ((double)sum / randomIntArray.length));
 	}
 
 }
