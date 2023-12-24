@@ -37,7 +37,9 @@ public class Lab04_05 {
 				maxidx = i;
 			}
 		}
-		System.out.println("가장 면적이 큰 원은 " + c[maxidx].show() + (" 이며, 면적은 " + c[maxidx].getArea() + "입니다.");
+		System.out.println("가장 면적이 큰 원은 ");
+		c[maxidx].show();
+		System.out.println(" 이며, 면적은 " + c[maxidx].getArea() + "입니다.");
 		scan.close();
 	}
 
