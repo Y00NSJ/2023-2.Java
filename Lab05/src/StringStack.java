@@ -17,7 +17,7 @@ public class StringStack implements Stack{
 	}
 	
 	public boolean push(String val) {
-		if (idx >= strStack.length)
+		if (idx == strStack.length -1)
 			return false;
 		else {
 			strStack[++idx] = val;
@@ -26,9 +26,9 @@ public class StringStack implements Stack{
 	}
 	
 	public String pop() {
-		if (idx < 0)
+		if (idx < -1)
 			return "";
 		else
-			return strStack[idx--];
+			return (idx + strStack[idx--]);
 	}
 }
