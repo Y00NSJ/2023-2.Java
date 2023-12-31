@@ -15,8 +15,7 @@ public class StackApp {
 				System.out.println("스택이 꽉 차서 푸시 불가!");
 		}
 		System.out.print("스택에 저장된 모든 문자열 팝 : ");
-		System.out.println(st.length());
-		for (int i = 1; i <= st.length(); i++)
+		for (int i = 0; i < st.capacity(); i++)
 			System.out.print(st.pop() + " ");
 		scan.close();
 	}
