@@ -5,7 +5,7 @@ public class StringStack implements Stack{
 	
 	public StringStack(int arrayLength) {
 		strStack = new String[arrayLength];
-		idx = 0;
+		idx = -1;
 	}
 	
 	public int length() {
@@ -20,7 +20,7 @@ public class StringStack implements Stack{
 		if (idx >= strStack.length)
 			return false;
 		else {
-			strStack[idx++] = val;
+			strStack[++idx] = val;
 			return true;
 		}
 	}
