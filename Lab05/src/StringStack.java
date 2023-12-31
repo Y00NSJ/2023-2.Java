@@ -29,6 +29,6 @@ public class StringStack implements Stack{
 		if (idx < -1)
 			return "";
 		else
-			return (idx + strStack[idx--]);
+			return (strStack[idx--]);
 	}
 }
