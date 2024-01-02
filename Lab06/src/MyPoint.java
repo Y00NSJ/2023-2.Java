@@ -11,4 +11,7 @@ public class MyPoint {
 		else
 			return false;
 	}
+	public String toString() {
+		return ("(" + x + "," + y + ")");
+	}
 }
