@@ -17,24 +17,24 @@ public class Lab06_11 {
 			}
 			
 			String[] orderArray = order.split("!");
-			if (orderArray[0] == "") {
+			if (orderArray.length != 2) {
 				System.out.println("잘못된 명령입니다!");
 				continue;
 			}
 			
-			int starts = orderArray[0].charAt(0);
-			int sloc = -1;
-			
-			for (int i = 0; i < sb.length(); i++) {
-				if (sb.charAt(i) == starts)
-					sloc = i;
+			else if (orderArray[0].length() == 0 || orderArray[1].length() == 0) {
+				System.out.println("잘못된 명령입니다!");
+				continue;
 			}
+			
+			int sloc = sb.indexOf(orderArray[0]);
+			
 			if (sloc == -1) {
 				System.out.println("찾을 수 없습니다!");
 				continue;
 			}
 			sb = sb.replace(sloc, sloc + orderArray[0].length(), orderArray[1]);
-			System.out.println(sb);
+			System.out.println(sb.toString());
 			
 			
 		}
