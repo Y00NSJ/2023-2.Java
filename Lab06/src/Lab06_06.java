@@ -14,10 +14,10 @@ public class Lab06_06 {
 		System.out.println("10초에 가까운 사람이 이기는 게임입니다.");
 		for (int i = 0; i < name.length; i++) {
 			System.out.print(name[i] + " 시작 <Enter>키 >> ");
-			scan.nextLine();
+			scan.next();
 			currentSec = time.get(Calendar.SECOND);
 			System.out.print("현재 초 시간 = " + currentSec + "\n10초 예상 후 <Enter> 키 >> ");
-			scan.nextLine();
+			scan.next();
 			afterSec = time.get(Calendar.SECOND);
 			System.out.print("현재 초 시간 = " + afterSec);
 			result[i] = (currentSec < afterSec)? afterSec - currentSec: Math.abs(currentSec - (afterSec + 10));
