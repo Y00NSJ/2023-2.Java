@@ -25,11 +25,12 @@ class Player {
 		time = Calendar.getInstance();
 		int afterSec = time.get(Calendar.SECOND);
 		System.out.println("	현재 초 시간 = " + afterSec);
-		int result = (currentSec <= afterSec)? afterSec - currentSec: afterSec + 60 - currentSec;
-		return result;
+		return getResult(currentSec, afterSec);
 	}
 	
-	//public int game()
+	public int getResult(int current, int after) {
+		return (current <= after)? after - current: after + 60 - current;
+	}
 }
 
 public class Lab06_06 {
