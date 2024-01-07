@@ -12,8 +12,7 @@ public class Lab06_07 {
 				System.out.println("종료합니다...");
 				break;
 			}
-			StringTokenizer st = new StringTokenizer(line);
-			System.out.println("어절 개수는 " + st.countTokens());
+			System.out.println("어절 개수는 " + line.split(" ").length);
 		}
 		
 		scan.close();
