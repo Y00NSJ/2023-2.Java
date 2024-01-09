@@ -15,12 +15,15 @@ public class Lab06_10 {
 	Scanner scan = new Scanner(System.in);
 	Random rd = new Random();
 	int [] rdNum = new int[3];
-	Person [] twoP = new Person [2];
+	Person [] players;
 	
 	public void setting() {	//
-		for (int i = 0; i < twoP.length; i++) {
+		System.out.print("겜블링 게임에 참여할 선수 숫자 >> ");
+		players = new Person [scan.nextInt()];
+		scan.nextLine();
+		for (int i = 0; i < players.length; i++) {
 			System.out.print((i+1) + "번째 선수 이름 >> ");
-			twoP[i] = new Person(scan.nextLine());
+			players[i] = new Person(scan.nextLine());
 		}
 	}
 	
@@ -29,8 +32,8 @@ public class Lab06_10 {
 		setting();
 		boolean isEnd = false;	//
 		while (true) {
-			for (int i = 0; i < twoP.length; i++) {
-				System.out.print("[" + twoP[i].getName() + "] : <Enter>");
+			for (int i = 0; i < players.length; i++) {
+				System.out.print("[" + players[i].getName() + "] : <Enter>");
 				scan.nextLine();
 				System.out.print("\t");
 				
@@ -40,7 +43,7 @@ public class Lab06_10 {
 				System.out.print(rdNum1 + "   " + rdNum2 + "   " + rdNum3 + "   ");
 				
 				if (rdNum1 == rdNum2 && rdNum2 == rdNum3) {
-					System.out.println(twoP[i].getName() + "님이 이겼습니다!");
+					System.out.println(players[i].getName() + "님이 이겼습니다!");
 					isEnd = true;
 					break;
 				}
