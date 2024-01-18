@@ -18,8 +18,8 @@ class Student1 {
 	public double getScore() {
 		return score;
 	}
-	public void print() {
-		System.out.println(getMajor() + ", " + getId() + ", " + Double.toString(getScore()));
+	public String toString() {
+		return major + ", " + id + ", " + score;
 	}
 }
 
@@ -59,8 +59,7 @@ public class Lab07_05_02 {
 			if (searchName.equals("그만"))
 				break;
 			if (db.containsKey(searchName)) {
-				System.out.print(searchName + ", ");
-				db.get(searchName).print();
+				System.out.println(searchName + ", " + db.get(searchName).toString());
 			}
 			else
 				System.out.println("해당하는 학생이 등록되어 있지 않습니다.");
