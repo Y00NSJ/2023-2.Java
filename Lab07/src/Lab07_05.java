@@ -62,7 +62,6 @@ public class Lab07_05 {
 					System.out.println(db.get(i).getName() + ", " + db.get(i).getMajor() + ", " + db.get(i).getId() + ", " + db.get(i).getScore());
 			}
 		}
-		scan.close();
 	}
 	
 	public void run() {
