@@ -32,8 +32,7 @@ public class Lab07_05 {
 	public static void run(ArrayList<Student> al) {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("학생 이름, 학과, 학번, 학점 평균을 입력하세요.");
-		System.out.print(">> ");
-		for (int i = 0; i < 4; i++) {
+		for (int i = 0; i < al.size(); i++) {
 			String[] inputInfo = scan.nextLine().split(", ");
 			al.add(new Student(inputInfo[0], inputInfo[1], Integer.valueOf(inputInfo[2]), Double.valueOf(inputInfo[3])));
 			
