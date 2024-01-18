@@ -27,6 +27,7 @@ public class Lab07_02 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		System.out.print("6과목의 학점을 빈 칸으로 분리 입력(A / B / C / D / F) >> ");
+		@SuppressWarnings("serial")
 		ArrayList<String> grades = new ArrayList<>() {
 			{for (int i = 0; i < 6; i++)
 				add(scan.next());
