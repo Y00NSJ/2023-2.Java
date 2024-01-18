@@ -19,11 +19,12 @@ public class Lab07_03 {
 			String searchKey = scan.next();
 			if (searchKey.equals("그만"))
 				break;
-			if (!nations.containsKey(searchKey)) {//get().equals(null)
+			
+			Integer rValue = nations.get(searchKey);
+			if (rValue == null)
 				System.out.println(searchKey + " 나라는 없습니다.");
-				continue;
-			}
-			System.out.println(searchKey + "의 인구는 " + nations.get(searchKey) + "명 입니다.");
+			else
+				System.out.println(searchKey + "의 인구는 " + rValue + "명 입니다.");
 		}
 		scan.close();
 	}
