@@ -25,12 +25,14 @@ public class Lab07_02 {
 	}
 	
 	public static void main(String[] args) {
-		ArrayList<String> grades = new ArrayList<>();
 		Scanner scan = new Scanner(System.in);
 		System.out.print("6과목의 학점을 빈 칸으로 분리 입력(A / B / C / D / F) >> ");
-		for (int i = 0; i < 6; i++) {
-			grades.add(scan.next());
-		}
+		ArrayList<String> grades = new ArrayList<>() {
+			{for (int i = 0; i < 6; i++)
+				add(scan.next());
+			}
+		};
+		
 		if (grades.size() < 6 || grades.size() > 6) {
 			System.out.println("6과목의 성적을 입력해야 합니다.");
 			scan.close();
