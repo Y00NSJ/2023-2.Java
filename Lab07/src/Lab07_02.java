@@ -2,28 +2,26 @@ import java.util.*;
 
 public class Lab07_02 {
 	public static void calGrade(ArrayList<String> a) {
-		int[] grade = new int[6];
-		int sum = 0;
-		for (int i = 0; i < grade.length; i++) {
+		double sum = 0;
+		for (int i = 0; i < a.size(); i++) {
 			switch (a.get(i)) {
 				case ("A"):
-					grade[i] = 4;
+					sum += 4;
 					break;
 				case ("B"):
-					grade[i] = 3;
+					sum += 3;
 					break;
 				case ("C"):
-					grade[i] = 2;
+					sum += 2;
 					break;
 				case ("D"):
-					grade[i] = 1;
+					sum += 1;
 					break;
 				default:
-					grade[i] = 0;
+					sum += 0;
 			}
-			sum += grade[i];
 		}
-		System.out.println((double)(sum)/6);
+		System.out.printf("평균 : %.2f", sum/a.size());
 	}
 	
 	public static void main(String[] args) {
