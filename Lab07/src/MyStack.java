@@ -1,6 +1,6 @@
 import java.util.Vector;
 
-class MyStack<T> implements IStack{
+class MyStack<T> implements IStack<T>{
 	private Vector<T> myV;
 	
 	MyStack() {
