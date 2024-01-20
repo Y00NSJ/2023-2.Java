@@ -9,10 +9,14 @@ class MyStack<T> implements IStack<T>{
 
 	@Override
 	public T pop() {
-		T popObj = myV.lastElement();
-		if (popObj != null)
-			myV.remove(popObj);
-		return popObj;
+		int size = myV.size();
+		if (size > 0) {
+			T get = myV.get(size - 1);
+			myV.remove(size - 1);
+			return get;
+		}
+		else
+			return null;
 	}
 
 	@Override
