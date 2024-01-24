@@ -12,9 +12,15 @@ public class Lab08_02 {
 			while ((c = br.readLine()) != null) {
 				System.out.println(c);
 			}
-			br.close();
 		} catch(IOException e) {
 			e.printStackTrace();
+		} finally {
+			if (br != null)
+				try {
+					br.close();
+				} catch(IOException e) {
+					
+				}
 		}
 	}
 
