@@ -19,6 +19,7 @@ public class Lab08_05 {
 			
 			int f1Count = 0, f2Count;
 			boolean isEqual = true;
+			int count = 0;
 
 			while (true) {
 				f1Count = bin1.read(buf1);
@@ -30,8 +31,10 @@ public class Lab08_05 {
 				for (int i = 0; i < f1Count; i++)
 					if (buf1[i] != buf2[i])
 						isEqual = false;
+				count++;
 			}
 			
+			System.out.println(count);
 			if (isEqual == true)
 				System.out.println("파일이 같습니다.");
 			else
