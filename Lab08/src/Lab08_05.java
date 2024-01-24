@@ -16,20 +16,26 @@ public class Lab08_05 {
 			f2 = new File(scan.next());
 			bin1 = new BufferedInputStream(new FileInputStream(f1));
 			bin2 = new BufferedInputStream(new FileInputStream(f2));
-			int line1 = 0;
-			int line2 = 0;
+			
+			int f1Count = 0, f2Count;
 			boolean isEqual = true;
-			while ((line1 = bin1.read(buf1)) != -1 || (line2 = bin2.read(buf2)) != -1) {
-				if (line1 != line2) {
-					System.out.println(line1);
-					System.out.println(line2);
+
+			while (true) {
+				f1Count = bin1.read(buf1);
+				f2Count = bin2.read(buf2);
+				if (f1Count != f2Count)
 					isEqual = false;
-					System.out.println("파일이 다릅니다.");
+				if (f1Count == -1)
 					break;
-				}
+				for (int i = 0; i < f1Count; i++)
+					if (buf1[i] != buf2[i])
+						isEqual = false;
 			}
+			
 			if (isEqual == true)
 				System.out.println("파일이 같습니다.");
+			else
+				System.out.println("파일이 다릅니다.");
 			bin1.close();
 			bin2.close();
 			scan.close();
