@@ -23,21 +23,25 @@ public class Lab08_06 {
 			FileReader fin2 = new FileReader(f2);
 			FileWriter appendFile = new FileWriter("appended.txt");
 			char[] buf1 = new char[1024];
-			int f1Count = 0, f2Count = 0, idx1 = -1;
-			while (f1Count != -1) {
-				f1Count = fin1.read(buf1);
-				System.out.println(f1Count);
+			int f1Count = 0, f2Count = 0, idx1 = 0;
+			
+			while ((f1Count = fin1.read()) != -1) {
+				buf1[idx1] = (char)f1Count;
+				//System.out.println(f1Count);
 				idx1++;
 				//fin2.read(buf1, f1Count-1, 1024);
 			}
+			
 			while (f2Count != -1) {
 				f2Count = fin2.read(buf1, idx1, 512);
 			}
+			
 			for (int i = 0; i < buf1.length; i++) {
 				appendFile.write(buf1[i]);
-				if (i == idx1 - 1)
+				if (i == idx1 - 1)	//인덱스?
 					appendFile.write("\r\n");
 			}
+			
 			fin1.close();
 			fin2.close();
 			appendFile.close();
