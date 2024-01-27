@@ -26,7 +26,7 @@ public class Lab08_06 {
 			int f1Count = 0, f2Count = 0, idx1 = -1;
 			while (f1Count != -1) {
 				f1Count = fin1.read(buf1);
-				System.out.println(f1Count);
+				//System.out.println(f1Count);
 				idx1++;
 				//fin2.read(buf1, f1Count-1, 1024);
 			}
